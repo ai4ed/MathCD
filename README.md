@@ -2,7 +2,7 @@
 
 # MathCD
 
-### A Benchmark Dataset for Cognitive Diagnosis<br>with Semantic Information
+### A Benchmark Dataset for Cognitive Diagnosis with Semantic Information
 
 **NeurIPS 2026 · Evaluations and Datasets Track**
 
