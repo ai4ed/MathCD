@@ -1,0 +1,641 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "sc": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "conformsTo": "dct:conformsTo",
+    "citeAs": "cr:citeAs",
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "recordSet": "cr:recordSet",
+    "field": "cr:field",
+    "source": "cr:source",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "extract": "cr:extract",
+    "column": "cr:column",
+    "jsonPath": "cr:jsonPath",
+    "includes": "cr:includes",
+    "key": "cr:key",
+    "repeated": "cr:repeated",
+    "isLiveDataset": "cr:isLiveDataset",
+    "subField": "cr:subField",
+    "format": "cr:format",
+    "path": "cr:path",
+    "samplingRate": "cr:samplingRate",
+    "equivalentProperty": "cr:equivalentProperty",
+    "replace": "cr:replace",
+    "separator": "cr:separator",
+    "regex": "cr:regex",
+    "fileProperty": "cr:fileProperty",
+    "references": "cr:references",
+    "transform": "cr:transform",
+    "parentField": "cr:parentField",
+    "md5": "cr:md5"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://github.com/ai4ed/MathCD#MidMath",
+  "name": "MathCD MidMath",
+  "description": "MidMath subset of MathCD: 701 students, 17941 exercises, 931 KCs and 30414 retained educational interactions. Raw tables are curated releases, not complete unedited platform logs.",
+  "url": "https://github.com/ai4ed/MathCD#midmath",
+  "version": "1.0.0",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": [
+    {
+      "@type": "sc:Person",
+      "name": "Xueyi Li",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Guangdong Institute of Smart Education, Jinan University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Youheng Bai",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Guangdong Institute of Smart Education, Jinan University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Tengteng Cheng",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Guangdong Institute of Smart Education, Jinan University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Mingliang Hou",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "TAL Education Group"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Teng Guo",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Guangdong Institute of Smart Education, Jinan University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Jiaqi Zheng",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Guangdong Institute of Smart Education, Jinan University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Yongdong Wu",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Guangdong Institute of Smart Education, Jinan University"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Zitao Liu",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Guangdong Institute of Smart Education, Jinan University"
+      }
+    }
+  ],
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "@inproceedings{li2026mathcd,\n  title={{MathCD}: A Benchmark Dataset for Cognitive Diagnosis with Semantic Information},\n  author={Li, Xueyi and Bai, Youheng and Cheng, Tengteng and Hou, Mingliang and Guo, Teng and Zheng, Jiaqi and Wu, Yongdong and Liu, Zitao},\n  booktitle={Proceedings of the 40th Annual Conference on Neural Information Processing Systems},\n  address={Sydney, Australia},\n  year={2026},\n  month={December}\n}",
+  "inLanguage": "zh",
+  "keywords": [
+    "cognitive diagnosis",
+    "mathematics",
+    "educational data mining",
+    "semantic information"
+  ],
+  "isLiveDataset": false,
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "archive",
+      "name": "MathCD-v1.0.0.zip",
+      "contentUrl": "https://github.com/ai4ed/MathCD/releases/download/v1.0.0/MathCD-v1.0.0.zip",
+      "encodingFormat": "application/zip",
+      "sha256": "44ef0cec9b531766cea78bc0a23af6c94f19d1a55c70db7fc442b718e7fdea62",
+      "contentSize": "15075011"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "MidMath-mapping-id_mapping.json",
+      "name": "id_mapping.json",
+      "containedIn": {
+        "@id": "archive"
+      },
+      "contentUrl": "MathCD/MidMath/mapping/id_mapping.json",
+      "encodingFormat": "application/json",
+      "sha256": "ae798c4b107c157e9a839367b2254928a9636033adab10f7bd8c734633683936",
+      "contentSize": "936534"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "MidMath-mapping-q_matrix.csv",
+      "name": "q_matrix.csv",
+      "containedIn": {
+        "@id": "archive"
+      },
+      "contentUrl": "MathCD/MidMath/mapping/q_matrix.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "0f902895e63f0fbafaeee55b195a786e52a2dba55b44188ccde55e93ce9bd91d",
+      "contentSize": "253189"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "MidMath-raw-grade_7_data.csv",
+      "name": "grade_7_data.csv",
+      "containedIn": {
+        "@id": "archive"
+      },
+      "contentUrl": "MathCD/MidMath/raw/grade_7_data.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "a0380af4c755b06bfcfa0386c5863b4116e2d1615911118d6f2535faa74cf237",
+      "contentSize": "15886573"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "MidMath-standard-test.csv",
+      "name": "test.csv",
+      "containedIn": {
+        "@id": "archive"
+      },
+      "contentUrl": "MathCD/MidMath/standard/test.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b464e8dba9522b8912e48764c66638b9370fbf9a6290dcbc2ed3dc9b8ea3c72f",
+      "contentSize": "104513"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "MidMath-standard-test.json",
+      "name": "test.json",
+      "containedIn": {
+        "@id": "archive"
+      },
+      "contentUrl": "MathCD/MidMath/standard/test.json",
+      "encodingFormat": "application/x-ndjson",
+      "sha256": "421b2d5f20b76ed284f75d4cdda803f2f42d223e8b87bdd5c3f770d7083908d0",
+      "contentSize": "23269226"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "MidMath-standard-train_valid.csv",
+      "name": "train_valid.csv",
+      "containedIn": {
+        "@id": "archive"
+      },
+      "contentUrl": "MathCD/MidMath/standard/train_valid.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "cbc2963a8c2f3d54d0c9ae9722c753e858eec69f4ba54aab1e7e8b1b1298088b",
+      "contentSize": "389907"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "MidMath-standard-train_valid.json",
+      "name": "train_valid.json",
+      "containedIn": {
+        "@id": "archive"
+      },
+      "contentUrl": "MathCD/MidMath/standard/train_valid.json",
+      "encodingFormat": "application/x-ndjson",
+      "sha256": "0a08491770584f23cd60b4cf1c86d4d81c6113fa26cb0f8d265eb66e13b2c650",
+      "contentSize": "92250868"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "MidMath-mapping-q_matrix",
+      "name": "MidMath-mapping-q_matrix",
+      "description": "Canonical CSV records. Standard JSON Lines files are equivalent representations with additional q_vector; mappings are distributed as auxiliary JSON.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-mapping-q_matrix/exercise_id",
+          "name": "exercise_id",
+          "description": "Subset-local release exercise identifier; raw uses random tokens and standard uses contiguous integers.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-mapping-q_matrix.csv"
+            },
+            "extract": {
+              "column": "exercise_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-mapping-q_matrix/kc_ids",
+          "name": "kc_ids",
+          "description": "JSON-encoded list of integer KC IDs in a CSV cell; indexing matches id_mapping.json and q_vector.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-mapping-q_matrix.csv"
+            },
+            "extract": {
+              "column": "kc_ids"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "MidMath-raw-grade_7_data",
+      "name": "MidMath-raw-grade_7_data",
+      "description": "Canonical CSV records. Standard JSON Lines files are equivalent representations with additional q_vector; mappings are distributed as auxiliary JSON.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/student_id",
+          "name": "student_id",
+          "description": "Subset-local release student identifier; raw uses random tokens and standard uses contiguous integers.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "student_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/exercise_id",
+          "name": "exercise_id",
+          "description": "Subset-local release exercise identifier; raw uses random tokens and standard uses contiguous integers.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "exercise_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/exercise_type",
+          "name": "exercise_type",
+          "description": "Exercise format; multiple-choice for all released records.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "exercise_type"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/exercise_text",
+          "name": "exercise_text",
+          "description": "Published exercise stem, with LaTeX where present; may include editorial repairs rather than verbatim historical text.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "exercise_text"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/response",
+          "name": "response",
+          "description": "Student-selected option letter; recover its text from exercise_text_with_options.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "response"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/correct_answer",
+          "name": "correct_answer",
+          "description": "Answer-key option letter; recover its text from exercise_text_with_options.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "correct_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/correct",
+          "name": "correct",
+          "description": "Retained binary correctness label (0 or 1).",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "correct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/timestamp",
+          "name": "timestamp",
+          "description": "Source created_at timestamp string, YYYY-MM-DD HH:MM:SS; timezone unspecified, preserved without shifting.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "timestamp"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/interaction_order",
+          "name": "interaction_order",
+          "description": "Zero-based chronological order within the student's retained interactions; ties use original source order.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "interaction_order"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/grade_id",
+          "name": "grade_id",
+          "description": "School grade represented by the interaction.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "grade_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/kc_list",
+          "name": "kc_list",
+          "description": "Serialized Python list literal of KC descriptions; parse with ast.literal_eval, not eval.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "kc_list"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/kc_text",
+          "name": "kc_text",
+          "description": "Primary or combined KC description; see subset README for name encoding.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "kc_text"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/difficulty",
+          "name": "difficulty",
+          "description": "Platform-provided ordinal difficulty, 1 through 5, with larger values denoting higher difficulty.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "difficulty"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-raw-grade_7_data/exercise_text_with_options",
+          "name": "exercise_text_with_options",
+          "description": "Published full exercise and lettered answer choices; includes curated/reconstructed text where applicable.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-raw-grade_7_data.csv"
+            },
+            "extract": {
+              "column": "exercise_text_with_options"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "MidMath-standard-test",
+      "name": "MidMath-standard-test",
+      "description": "Canonical CSV records. Standard JSON Lines files are equivalent representations with additional q_vector; mappings are distributed as auxiliary JSON.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-standard-test/student_id",
+          "name": "student_id",
+          "description": "Subset-local release student identifier; raw uses random tokens and standard uses contiguous integers.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-standard-test.csv"
+            },
+            "extract": {
+              "column": "student_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-standard-test/exercise_id",
+          "name": "exercise_id",
+          "description": "Subset-local release exercise identifier; raw uses random tokens and standard uses contiguous integers.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-standard-test.csv"
+            },
+            "extract": {
+              "column": "exercise_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-standard-test/correct",
+          "name": "correct",
+          "description": "Retained binary correctness label (0 or 1).",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-standard-test.csv"
+            },
+            "extract": {
+              "column": "correct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-standard-test/fold",
+          "name": "fold",
+          "description": "Provided cross-validation fold 0 through 4 in train_valid; -1 in the fixed test file.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-standard-test.csv"
+            },
+            "extract": {
+              "column": "fold"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "MidMath-standard-train_valid",
+      "name": "MidMath-standard-train_valid",
+      "description": "Canonical CSV records. Standard JSON Lines files are equivalent representations with additional q_vector; mappings are distributed as auxiliary JSON.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-standard-train_valid/student_id",
+          "name": "student_id",
+          "description": "Subset-local release student identifier; raw uses random tokens and standard uses contiguous integers.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-standard-train_valid.csv"
+            },
+            "extract": {
+              "column": "student_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-standard-train_valid/exercise_id",
+          "name": "exercise_id",
+          "description": "Subset-local release exercise identifier; raw uses random tokens and standard uses contiguous integers.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-standard-train_valid.csv"
+            },
+            "extract": {
+              "column": "exercise_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-standard-train_valid/correct",
+          "name": "correct",
+          "description": "Retained binary correctness label (0 or 1).",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-standard-train_valid.csv"
+            },
+            "extract": {
+              "column": "correct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "MidMath-standard-train_valid/fold",
+          "name": "fold",
+          "description": "Provided cross-validation fold 0 through 4 in train_valid; -1 in the fixed test file.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "MidMath-standard-train_valid.csv"
+            },
+            "extract": {
+              "column": "fold"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rai:dataLimitations": "The release covers selected students and exercises from one Chinese tutoring platform and grades 3, 4, 5 and 7. Filtering, first-attempt retention and a minimum of 15 valid interactions per student exclude some usage patterns. KC frequencies, exercise difficulty, history lengths and correctness are imbalanced. Grade3 is primarily English while Math50k and MidMath are Chinese, confounding grade, curriculum and language comparisons. Platform annotations and translations may contain errors. The protocol does not establish generalization to new students, items, schools or platforms. Exercise wording has been curated and sometimes reconstructed, so the release is not an exact replay of all historical screens. The fixed interaction split is not chronological. All test students occur in train_valid, but 2749 test exercises (2884 test interactions) are absent from the full train_valid portion in this subset. Aggregate metrics do not separately characterize cold-start behavior; a selected training fold may leave further exercises unobserved.",
+  "rai:dataBiases": "Potential platform selection, curriculum, language/translation, annotation and activity-selection biases; uneven coverage of KCs, difficulty levels and response histories. The release lacks demographic measurements sufficient for comprehensive demographic fairness audits. Observed response prediction should not be treated as direct proof of student understanding.",
+  "rai:personalSensitiveInformation": "The data concerns school-age learners. The public release replaces student and exercise identifiers with subset-specific random tokens and separate contiguous integer IDs; original-to-release correspondences and full source logs are not distributed. Exact timestamps, grade level, response choices and educational performance remain sensitive contextual information. No claim of zero re-identification risk is made. Identity-number teaching templates contain masked or synthetic placeholders and must not be interpreted as verified real-person identities. Names, emails, phone numbers, school names and home addresses are not intended release fields. The current paper states that collection and release followed the platform user agreement and privacy policy, underwent internal compliance review, and required no additional institutional ethics approval under the applicable policies. It does not specify the participant/guardian consent mechanism, review body, date, or exemption identifier.",
+  "rai:dataUseCases": "Intended for research on identifier-based and semantic-enhanced cognitive diagnosis, response prediction and analysis of educational LLM evaluations. Difficulty comparisons use platform-provided labels, not independently validated latent difficulty. The current evidence does not validate high-stakes student assessment, automatic placement, demographic fairness, causal learning-gain estimates or individual knowledge-state accuracy. Additional tasks such as recommendation require task-specific validation. The supplied protocol measures held-out interaction prediction using available train_valid histories; it does not establish temporal forecasting, because observed histories can include interactions later than a test target.",
+  "rai:dataSocialImpact": "Research may improve educational evaluation and instructional support. Misuse may enable profiling, unjustified high-stakes assessment or disclosure through linkage of learning histories. Evaluate limitations, use human oversight, avoid re-identification, and do not treat benchmark scores as sufficient evidence for deployment. These responsible-use recommendations do not add restrictions to the CC BY 4.0 license.",
+  "rai:hasSyntheticData": true,
+  "rai:dataCollection": "Real-world student interactions from a TAL Education Group intelligent tutoring system in China. Not specified beyond the platform and country in the available paper; the released timestamp ranges are reported separately and are not asserted to be the complete collection period.",
+  "rai:dataPreprocessingProtocol": "As described in the paper: filter missing/invalid critical fields and answer choices, normalize KC delimiters, retain valid binary correctness labels and the first valid attempt per student-exercise pair, remove students with fewer than 15 valid interactions, and sort retained raw interactions within students by original timestamps with source-row tie breaking. Random release tokens replace original identifiers; raw-standard mappings and fixed folds are supplied. Exercise text and answer choices were curated for clarity/consistency, including explicit condition reconstructions. Student selections, answer letters, binary correctness labels and fixed standard-file splits were preserved in the recorded text-only repair rounds.",
+  "rai:dataAnnotationProtocol": "KC and five-level difficulty annotations come from the source platform. The paper attributes the original Grade3 Chinese-to-English translation to that platform. Correctness and response labels are retained interaction labels. Human editorial review and mathematical checks were recorded for selected corrected items; no whole-corpus mathematical proof or inter-annotator agreement statistic is claimed. The authors confirmed that the current paper checklist governs this release: LLMs are used for model evaluation rather than generating MathCD dataset content. The original Grade3 translation is attributed to the source platform. Published exercise text includes editorial corrections and condition reconstructions recorded during curation; those changes are not represented as verbatim historical exercise text.",
+  "prov:wasDerivedFrom": {
+    "@id": "urn:mathcd:source:tal-its-interaction-logs",
+    "@type": "prov:Entity",
+    "description": "Nonpublic TAL Education Group source interaction logs; descriptive provenance identifier, not a public download URL."
+  },
+  "prov:wasGeneratedBy": {
+    "@id": "urn:mathcd:activity:curation-v1.0.0",
+    "@type": "prov:Activity",
+    "description": "As described in the paper: filter missing/invalid critical fields and answer choices, normalize KC delimiters, retain valid binary correctness labels and the first valid attempt per student-exercise pair, remove students with fewer than 15 valid interactions, and sort retained raw interactions within students by original timestamps with source-row tie breaking. Random release tokens replace original identifiers; raw-standard mappings and fixed folds are supplied. Exercise text and answer choices were curated for clarity/consistency, including explicit condition reconstructions. Student selections, answer letters, binary correctness labels and fixed standard-file splits were preserved in the recorded text-only repair rounds. KC and five-level difficulty annotations come from the source platform. The paper attributes the original Grade3 Chinese-to-English translation to that platform. Correctness and response labels are retained interaction labels. Human editorial review and mathematical checks were recorded for selected corrected items; no whole-corpus mathematical proof or inter-annotator agreement statistic is claimed. The authors confirmed that the current paper checklist governs this release: LLMs are used for model evaluation rather than generating MathCD dataset content. The original Grade3 translation is attributed to the source platform. Published exercise text includes editorial corrections and condition reconstructions recorded during curation; those changes are not represented as verbatim historical exercise text."
+  }
+}
