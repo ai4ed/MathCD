@@ -22,9 +22,9 @@ Teng Guo<sup>1</sup> · Jiaqi Zheng<sup>1</sup> · Yongdong Wu<sup>1</sup> · Zi
 
 ---
 
-MathCD connects **student response histories** with **mathematical meaning**: exercise text and choices, knowledge concept (KC) descriptions, selected answers, correctness, timestamps and difficulty labels. It supports evaluation of conventional cognitive diagnosis, semantic-enhanced models and foundation LLMs across primary and middle school mathematics.
+MathCD provides student-exercise interactions with rich semantic information, including exercise text, knowledge concept (KC) text, answer text, response text, exercise type, and exercise difficulty. It supports the development and evaluation of semantic-enhanced cognitive diagnosis (CD) models and the evaluation of foundation large language models on K-12 mathematics.
 
-- **Three complementary subsets:** Grade3 in primarily English, Math50k and MidMath in Chinese, spanning grades 3, 4–5 and 7.
+- **Three complementary subsets:** Grade3 in English, Math50k and MidMath in Chinese, spanning grades 3, 4–5 and 7.
 - **Aligned data views:** curated interaction tables, fixed training/validation/test splits, Q matrices and integer-ID mappings.
 - **Documented evaluation:** protocols for identifier-based CD, semantic-enhanced CD, and LLM correctness, answer-choice and difficulty-comparison tasks.
 
