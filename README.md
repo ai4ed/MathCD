@@ -6,12 +6,6 @@
 
 **NeurIPS 2026 · Evaluations and Datasets Track**
 
-Xueyi Li<sup>1</sup> · Youheng Bai<sup>1</sup> · Tengteng Cheng<sup>1</sup> · Mingliang Hou<sup>2</sup><br>
-Teng Guo<sup>1</sup> · Jiaqi Zheng<sup>1</sup> · Yongdong Wu<sup>1</sup> · Zitao Liu<sup>1</sup>
-
-<sup>1</sup>Guangdong Institute of Smart Education, Jinan University<br>
-<sup>2</sup>TAL Education Group
-
 [![Dataset](https://img.shields.io/badge/Dataset-106%2C212_interactions-087f8c?style=flat-square)](#dataset)
 [![Subsets](https://img.shields.io/badge/Subsets-3-6851a3?style=flat-square)](#dataset)
 [![Data license](https://img.shields.io/badge/Data-CC_BY_4.0-238636?style=flat-square)](LICENSE)
